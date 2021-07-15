@@ -3,13 +3,14 @@ body{
     padding: 0;
 }
 
-
+/*-------------------- intro components ------------------------------*/
 .screen{
     position: fixed;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    z-index: 10;
 }
 
 .screen-inner{
@@ -63,6 +64,28 @@ body{
     background-color: #C3AED6;
     z-index: 11;
 }
+
+.intro{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fae7d9;
+}
+
+.snaps{
+    position: absolute;
+    left: 40px;
+    top: 80px;
+}
+
+.snap-pic{
+    width: 300px;
+    z-index: 8;
+}
+
+.snap-pic:first-child{
+    filter: blur(8px);
+}
+/*-------------------- miscellaneous  components ------------------------------*/
 .hidden{
     display: none;
 }
