@@ -1,5 +1,5 @@
 const intro = document.querySelector('.intro'),
-      screen = document.querySelector('.screen'),
+      screenCam = document.querySelector('.screen'),
       innerLens = document.querySelector('.lens-inner'),
       outerLens = document.querySelector('.lens-outer'),
       focClick = new Audio('./assets/sound/camClick2.mp3'),
@@ -13,6 +13,10 @@ goBtn.addEventListener('click', function(){
     focusLens();
     focusMe();
     setTimeout(function(){takeSnaps();}, 800);
+    setTimeout(function(){
+        toggle(screenCam);
+        toggle(goBtn);
+    }, 3500);
     
 
 });
@@ -68,9 +72,9 @@ function takeSnaps(){
         setTimeout(function(){
             toggle(snapsMe[i - 1]);
             toggle(snapsMe[i]);
-            screen.style.backgroundColor = "rgba(174, 209, 245, 0.4)";
+            screenCam.style.backgroundColor = "rgba(174, 209, 245, 0.4)";
             setTimeout(function() {
-                screen.style.backgroundColor = "transparent";
+                screenCam.style.backgroundColor = "transparent";
             }, 100);
 
         }, 600 * i);
