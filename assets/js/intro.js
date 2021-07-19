@@ -4,10 +4,18 @@ const intro = document.querySelector('.intro'),
       outerLens = document.querySelector('.lens-outer'),
       focClick = new Audio('./assets/sound/camClick2.mp3'),
       snapsMe = document.querySelectorAll('.snap-pic'),
+      snapsDiv = document.querySelector('.snaps'),
       goBtn = document.querySelector('.intro-btn');
 
 //adding event listeners
 goBtn.addEventListener('click', function(){
+
+    playIntro();
+    
+});
+
+//intro function
+function playIntro(){
 
     focClick.play();
     focusLens();
@@ -16,10 +24,40 @@ goBtn.addEventListener('click', function(){
     setTimeout(function(){
         toggle(screenCam);
         toggle(goBtn);
+        shapeshift();
     }, 3500);
-    
 
-});
+}
+
+//setting intro finish
+
+//change portrait shape 
+function shapeshift() {
+    snapsDiv.style.border = '1px solid red';
+    snapsDiv.style.borderRadius = '100%';
+    snapsDiv.style.height = '30vh';
+    snapsDiv.style.width = '30vh';
+    snapsDiv.style.overflow = 'clip';
+
+    shiftPics();
+    
+}
+//move and set portrait
+function shiftPics(){
+    snapsDiv.style.transform = 'translate(20vh, 0)';
+
+    /* for (let i = 0; i < snapsMe.length; i++) {
+
+        console.log(snapsMe[i]);
+        
+        snapsMe[i].classList.add('shifted');
+        
+    }; */
+
+    snapsMe.forEach((elem) => {
+        elem.classList.add('shifted');
+    }); 
+}
 
 //adding functions for focusing the lens
 function focusLens() {

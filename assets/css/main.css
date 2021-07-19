@@ -73,17 +73,24 @@ body{
 
 .snaps{
     position: absolute;
-    left: 40px;
+    left: 10vw;
     top: 80px;
+    transition: ease-in 800ms;
 }
 
 .snap-pic{
-    width: 300px;
+    width: 80vw;
     z-index: 8;
 }
 
 .snap-pic:first-child{
     filter: blur(8px);
+}
+
+.shifted{
+    transform: translate(-20vh, 0);
+    transition: ease-in 800ms;
+
 }
 /*-------------------- miscellaneous  components ------------------------------*/
 .hidden{
