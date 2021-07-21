@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 /*-------------------- intro components ------------------------------*/
@@ -88,9 +89,33 @@ body{
 }
 
 .shifted{
-    transform: translate(-20vh, 0);
+    transform: translate(-27vw, 2vh);
     transition: ease-in 800ms;
 
+}
+
+.intro-text{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    transition: ease-in 800ms;
+    color: #8675A9;
+}
+
+.l-text{
+    top: 10vh;
+}
+
+.m-text{
+    top: 60vh;
+}
+
+.ms-text{
+    top: 70vh;
+}
+
+.faded{
+    opacity: 0;
 }
 /*-------------------- miscellaneous  components ------------------------------*/
 .hidden{

@@ -5,6 +5,7 @@ const intro = document.querySelector('.intro'),
       focClick = new Audio('./assets/sound/camClick2.mp3'),
       snapsMe = document.querySelectorAll('.snap-pic'),
       snapsDiv = document.querySelector('.snaps'),
+      introText = document.querySelectorAll('.intro-text'),
       goBtn = document.querySelector('.intro-btn');
 
 //adding event listeners
@@ -25,6 +26,7 @@ function playIntro(){
         toggle(screenCam);
         toggle(goBtn);
         shapeshift();
+        toggleList(introText, 'faded');
     }, 3500);
 
 }
@@ -33,10 +35,10 @@ function playIntro(){
 
 //change portrait shape 
 function shapeshift() {
-    snapsDiv.style.border = '1px solid red';
+    snapsDiv.style.border = '4px solid #C3AED6';
     snapsDiv.style.borderRadius = '100%';
-    snapsDiv.style.height = '30vh';
-    snapsDiv.style.width = '30vh';
+    snapsDiv.style.height = '32vh';
+    snapsDiv.style.width = '32vh';
     snapsDiv.style.overflow = 'clip';
 
     shiftPics();
@@ -44,15 +46,7 @@ function shapeshift() {
 }
 //move and set portrait
 function shiftPics(){
-    snapsDiv.style.transform = 'translate(20vh, 0)';
-
-    /* for (let i = 0; i < snapsMe.length; i++) {
-
-        console.log(snapsMe[i]);
-        
-        snapsMe[i].classList.add('shifted');
-        
-    }; */
+    snapsDiv.style.transform = 'translate(15vw, 8vh)';
 
     snapsMe.forEach((elem) => {
         elem.classList.add('shifted');
@@ -120,3 +114,4 @@ function takeSnaps(){
         
     }
 }
+
