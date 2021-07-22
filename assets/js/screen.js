@@ -1,4 +1,5 @@
 //const dim = document.querySelector('.dim');
+const styleLink = document.querySelector('#scr-style');
 
 //dimensions and animation finished
 let ww = getWidth(),
@@ -16,6 +17,10 @@ getViewType();
 function getViewType() {
 
     type = ww < wh ? 'long' : 'wide';
+
+    if(type !== 'long'){
+        styleLink.href = 'assets/css/wide.css';
+    }
 
     /* if(ww < wh) {
        if(ww < 560) {
