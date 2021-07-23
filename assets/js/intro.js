@@ -6,7 +6,8 @@ const intro = document.querySelector('.intro'),
       snapsMe = document.querySelectorAll('.snap-pic'),
       snapsDiv = document.querySelector('.snaps'),
       introText = document.querySelectorAll('.intro-text'),
-      goBtn = document.querySelector('.intro-btn');
+      goBtn = document.querySelector('.intro-btn'),
+      navBar = document.querySelector('.nav');
 
 //adding event listeners
 goBtn.addEventListener('click', function(){
@@ -23,10 +24,11 @@ function playIntro(){
     focusMe();
     setTimeout(function(){takeSnaps();}, 800);
     setTimeout(function(){
-        toggle(screenCam);
-        toggle(goBtn);
+        toggle(screenCam, 'hidden');
+        toggle(goBtn, 'hidden');
         shapeshift();
         toggleList(introText, 'faded');
+        toggle(navBar, 'faded');
     }, 3500);
 
 }
@@ -102,8 +104,8 @@ function takeSnaps(){
         
         //console.log(snapsMe[i]);
         setTimeout(function(){
-            toggle(snapsMe[i - 1]);
-            toggle(snapsMe[i]);
+            toggle(snapsMe[i - 1], 'hidden');
+            toggle(snapsMe[i], 'hidden');
             screenCam.style.backgroundColor = "rgba(174, 209, 245, 0.4)";
             setTimeout(function() {
                 screenCam.style.backgroundColor = "transparent";

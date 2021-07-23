@@ -1,6 +1,11 @@
 
 
 /*-------------------- miscellaneous  components ------------------------------*/
+.collapsed{
+    width: 0;
+    overflow-x: hidden;
+}
+
 .faded{
     opacity: 0;
 }

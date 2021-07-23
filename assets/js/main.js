@@ -1,12 +1,12 @@
 
 
-console.log('hello');
+//console.log('hello');
 
 //---------------------miscellanoeus functions 
 
 //toggle visibility
-function toggle(elem){
-    elem.classList.toggle('hidden');
+function toggle(elem, sty){
+    elem.classList.toggle(sty);
 }
 
 //toggle listed elements 

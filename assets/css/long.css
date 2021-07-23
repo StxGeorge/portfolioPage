@@ -1,4 +1,26 @@
+ 
+ /*---------------nav bar components-----------------------*/
 
+ .nav{
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: flex;
+     background-color: var(--main-nav);
+ }
+
+ .nav-logo{
+     margin: 0;
+     padding: 0;
+ }
+
+ .nav-menu{
+     display: flex;
+ }
+
+ .nav-links{
+    display: flex;
+}
 
 /*-------------------- intro components ------------------------------*/
 .screen{
@@ -65,7 +87,7 @@
 .intro{
     width: 100vw;
     height: 100vh;
-    background-color: #fae7d9;
+    background-color: var(--main-bg);
 }
 
 .snaps{

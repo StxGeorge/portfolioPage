@@ -1,3 +1,13 @@
+
+html{
+
+    --main-bg: #FFD5CD;
+    --main-nav: #EFBBCF;
+    --main-textbg: #C3AED6;
+    --main-text: #8675A9;
+
+}
+
 body{
     margin: 0;
     padding: 0;
