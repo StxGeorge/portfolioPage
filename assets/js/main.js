@@ -1,6 +1,9 @@
 
 
 //console.log('hello');
+function populateCont(param){
+    console.log(param);
+}
 
 //---------------------miscellanoeus functions 
 

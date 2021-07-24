@@ -6,7 +6,9 @@
      top: 0;
      left: 0;
      display: flex;
+     justify-content: space-between;
      background-color: var(--main-nav);
+    z-index: 10;
  }
 
  .nav-logo{
@@ -16,6 +18,7 @@
 
  .nav-menu{
      display: flex;
+     transition: ease-in 500ms;
  }
 
  .nav-links{
@@ -88,6 +91,11 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--main-bg);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 0;
+    color: var(--main-text);
 }
 
 .snaps{
@@ -99,7 +107,7 @@
 
 .snap-pic{
     width: 80vw;
-    z-index: 8;
+    z-index: 1;
 }
 
 .snap-pic:first-child{
@@ -117,7 +125,6 @@
     margin: 0 auto;
     text-align: center;
     transition: ease-in 800ms;
-    color: #8675A9;
 }
 
 .l-text{
@@ -125,9 +132,31 @@
 }
 
 .m-text{
-    top: 60vh;
+    top: 56vh;
 }
 
 .ms-text{
-    top: 70vh;
+    top: 60vh;
+}
+
+.cont-btn{
+    width: 130px;
+    height: 40px;
+    position:fixed;
+    background-color: var(--main-textbg);
+    font-weight: 400;
+    font-size: 1.2em;
+    top: 86vh;
+    text-align: center;
+    margin: 0;
+    padding: .6em 0 0 0;
+    
+}
+
+#cli-btn{
+    left: 6vw;
+}
+
+#dev-btn{
+    right: 6vw;
 }

@@ -1,9 +1,23 @@
 
 
 /*-------------------- miscellaneous  components ------------------------------*/
+.reversed{
+    transform: rotateY(180deg);
+}
+
 .collapsed{
     width: 0;
+    transform: scaleX(0);
     overflow-x: hidden;
+}
+
+.wide{
+    width: 100vw;
+}
+
+.compressed{
+    transform: scaleY(0);
+    overflow-y: hidden;
 }
 
 .faded{

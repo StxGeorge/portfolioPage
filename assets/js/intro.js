@@ -7,7 +7,11 @@ const intro = document.querySelector('.intro'),
       snapsDiv = document.querySelector('.snaps'),
       introText = document.querySelectorAll('.intro-text'),
       goBtn = document.querySelector('.intro-btn'),
-      navBar = document.querySelector('.nav');
+      contBtns = document.querySelectorAll('.cont-btn'),
+      navBar = document.querySelector('.nav'),
+      navMenu = document.querySelector('.nav-menu'),
+      arrow = document.querySelector('.arrow'),
+      footer = document.querySelector('.footer');
 
 //adding event listeners
 goBtn.addEventListener('click', function(){
@@ -15,6 +19,12 @@ goBtn.addEventListener('click', function(){
     playIntro();
     
 });
+
+arrow.addEventListener('click', function(){
+    toggle(navBar, 'wide');
+    toggle(navMenu, 'collapsed');
+    toggle(arrow, 'reversed');
+})
 
 //intro function
 function playIntro(){
@@ -29,6 +39,12 @@ function playIntro(){
         shapeshift();
         toggleList(introText, 'faded');
         toggle(navBar, 'faded');
+        //toggle(footer, 'compressed');
+        contBtns.forEach(function(btn){
+            let name = btn.id;
+            toggle(btn, 'hidden');
+            btn.addEventListener('click', function(){populateCont(name);});
+        })
     }, 3500);
 
 }

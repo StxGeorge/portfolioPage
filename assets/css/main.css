@@ -14,4 +14,18 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+.footer{
+    position: fixed;
+    bottom: 0vh;
+    left: 0vw;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-nav);
+    display: flex;
+    z-index: 10;
+    transition: ease-in 800ms;
+    transform-origin: bottom;
+}    
+
 
