@@ -1,6 +1,8 @@
 
 html{
 
+    --ashen-gray: #FAF5EF;
+    --blue-gray: #D3E0EA;
     --main-bg: #FFD5CD;
     --main-nav: #EFBBCF;
     --main-textbg: #C3AED6;
@@ -9,6 +11,7 @@ html{
 }
 
 body{
+    background-color: var(--ashen-gray);
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -21,7 +24,7 @@ body{
     width: 100vw;
     margin: 0;
     padding: 0;
-    background-color: var(--main-nav);
+    background-color: var(--blue-gray);
     display: flex;
     z-index: 10;
     transition: ease-in 800ms;

@@ -43,7 +43,7 @@ function playIntro(){
         contBtns.forEach(function(btn){
             let name = btn.id;
             toggle(btn, 'hidden');
-            btn.addEventListener('click', function(){populateCont(name);});
+            btn.addEventListener('click', function(){routeContent(name);});
         })
     }, 3500);
 

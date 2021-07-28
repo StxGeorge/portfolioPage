@@ -7,7 +7,7 @@
      left: 0;
      display: flex;
      justify-content: space-between;
-     background-color: var(--main-nav);
+     background-color: var(--blue-gray);
     z-index: 10;
  }
 
@@ -90,7 +90,7 @@
 .intro{
     width: 100vw;
     height: 100vh;
-    background-color: var(--main-bg);
+    background-color: var(--ashen-gray);
     position: fixed;
     top:0;
     left:0;
@@ -159,4 +159,35 @@
 
 #dev-btn{
     right: 6vw;
+}
+
+/*--------------rock window section------------------------*/
+
+.rock-window{
+    position: fixed;
+    width: 100vw;
+    z-index: 4;
+}
+
+.section-bg{
+    position:fixed;
+}
+
+#clients{
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 6;
+}
+
+.card-box{
+    color: rgb(242, 248, 184);
+    
+}
+
+.card-box:first-child{
+    margin-top: 45vh;
+}
+
+.card-title{
+    z-index: 5;
 }
