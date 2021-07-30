@@ -7,7 +7,7 @@
      left: 0;
      display: flex;
      justify-content: space-between;
-     background-color: var(--blue-gray);
+     background-color: var(--main-textbg);
     z-index: 10;
  }
 
@@ -101,7 +101,7 @@
 .snaps{
     position: absolute;
     left: 10vw;
-    top: 80px;
+    top: 15vh;
     transition: ease-in 800ms;
 }
 
@@ -181,13 +181,37 @@
 
 .card-box{
     color: rgb(242, 248, 184);
+    border: 1px solid red;
     
 }
 
 .card-box:first-child{
-    margin-top: 45vh;
+    margin-top: 55vh;
+}
+
+.card-segment{
+    height: 30%;
+    border: 1px solid green;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.card-segment p{
+    max-width: 86%;
+    margin-left: 7%;
 }
 
 .card-title{
-    z-index: 5;
+    font-size: 1.2em;
+}
+
+.card-content{
+    margin-top: 5%;
+    font-size: 1.2em;
+}
+
+.card-comment{
+    margin-top: 5%;
+    font-size: 1.4em;
 }

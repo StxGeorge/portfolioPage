@@ -8,23 +8,26 @@ function populateCont(list, elem, bg){
         //creating elements
         let card = makeElem('div', 'card-box'),
             itemBg = makeElem('img', 'card-bg'),
-            cardTitle = makeElem('h1', 'card-title'),
-            cardContent = makeElem('h3', 'card-content'),
-            cardComment = makeElem('h2', 'card-comment');
+            sectKeys = Object.keys(item.text);
 
         //adding content
         itemBg.src = (type !== 'long')?  item.backgroundW : item.background;
         itemBg.classList.add('hidden');
 
-        cardTitle.textContent = item.title;
-        insBeforeEnd(card, cardTitle);
+        for (let i = 0; i < sectKeys.length; i++) {
+            let section = makeElem('div', 'card-segment');
 
-        cardContent.textContent = item.content;
-        insBeforeEnd(card, cardContent);
+            section.id = sectKeys[i] + item.id;
 
-        cardComment.textContent = item.comment;
-        insBeforeEnd(card, cardComment);
+            section.classList.add("card-" + sectKeys[i]);
 
+            section.innerHTML = (sectKeys[i] === "title") ? "<h1>" + item.text.title + "</h1>" : "<p>" + item.text[sectKeys[i]] + "</p>";
+
+            insBeforeEnd(card, section);
+            
+        }
+
+       
         insBeforeEnd(elem, card);
         insBeforeEnd(bg, itemBg);
     });
@@ -57,7 +60,7 @@ function insBeforeEnd(el, itm){
 function getCoords(ele){
     let coordsArr = ele.getBoundingClientRect();
 
-    console.log(coordsArr);
+    //console.log(coordsArr);
 
     return coordsArr;
 }

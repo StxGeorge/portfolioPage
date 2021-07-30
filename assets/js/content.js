@@ -7,7 +7,9 @@ const rockWindow = document.querySelector('.rock-window'),
 
 //content on display etc
 
-let onScreen;
+let onScreen,
+    currentSegment,
+    currentBacks;
 
 
 
@@ -34,6 +36,33 @@ function routeContent(route){
             centerPicV(picWidth, longPicRatio, clients);
             giveSize('.card-box', picWidth, (picWidth * longPicRatio));
             giveSize('.card-bg', picWidth, (picWidth * longPicRatio));
+            currentSegment = document.querySelectorAll('.card-segment');
+            currentBacks = document.querySelectorAll('.card-bg');
+
+            clients.addEventListener('scroll', function(){
+
+                let range = getCoords(rockWindow),
+                    b = 1,
+                    inRange;
+                
+                for (let i = 0; i < currentSegment.length; i+=3) {
+                     
+                    if (('title' + b) === currentSegment[i].id) {
+
+                        let positionNow = getCoords(currentSegment[i]);
+
+                        if(positionNow.bottom < range.bottom && positionNow.top > (range.top - 5)) {
+                            console.log(currentSegment[i].textContent);
+                        };
+
+                        //inRange
+                        
+                        //console.log(range);
+                    }
+
+                    b++;
+                }
+            })            
             break;
         case 'dev-btn':
             //populateCont(route);
